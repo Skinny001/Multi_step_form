@@ -32,9 +32,3 @@ Your users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
-
-### Deployed on
-
-- Live Url - (https://sukanyagurav.github.io/Frontend-Mentor---Multi-step-form/)
-
-**Have fun building!** 🚀
