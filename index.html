@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sidebar start -->
+<main>
+  <aside>
+    <div class="steps">
+      <div class="step active__form">
+        <span class="step__no">1</span>
+        <span class="step__title">step 1</span>
+        <span class="step__description">Your info</span>
+      </div>
+      <div class="step">
+        <span class="step__no">2</span>
+        <span class="step__title">step 2</span>
+        <span class="step__description">Select plan</span>
+      </div>
+      <div class="step">
+        <span class="step__no">3</span>
+        <span class="step__title">step 3</span>
+        <span class="step__description">add ons</span>
+      </div>
+      <div class="step">
+        <span class="step__no">4</span>
+        <span class="step__title">step 4</span>
+        <span class="step__description">summary</span>
+      </div>
+    </div>
+  </aside>
+  <div class="content">
+    <article id="1" class="step1__content show__content">
+      <h1>Personal info</h1>
+      <p> Please provide your name, email address, and phone number.
+      </p>
+      <form class="form" >
+        <div class="form__data">
+          <label for="name">Name</label>
+          <input type="text" id="name" data-name="Name" autocomplete="off"  placeholder="e.g. Bamigboye Temitope">
+          <span class="error__message"></span>
+        </div>
+        <div class="form__data">
+          <label for="email">Email Address</label>
+          <input type="email" id="email"  data-name="Email address" autocomplete="off" placeholder="e.g. BamigboyeTemitope@lorem.com">
+          <span class="error__message"></span>
+        </div>
+        <div class="form__data">
+          <label for="phone_number">Phone Number</label>
+          <input type="tel" id="phone_number" maxlength="14" autocomplete="off" data-name="Phone number"  placeholder="e.g. +234 567 890 00">
+          <span class="error__message"></span>
+        </div>
+      </form>
+    </article>
+    <article id="2" class="step2__content hide__content">
+      <h1>Select your plan</h1>
+      <p>You have the option of monthly or yearly billing.
+      </p>
+      <div class="plan__duration" >
+   
+        <label for="select"   class="yearly">Yearly</label>
+        <input type="checkbox" tabindex="4" id="select" class="toggle" checked aria-label="Please select a plan">
+   
+          <label for="select" class="label" >
+            <span class="ball"></span>
+          </label>
+       
+        <label for="select"   class="month">Monthly</label>
+    </div>
+      <div class="plan__container">
+        <div tabindex="1" class="plan active">
+          <img src="assets/images/icon-arcade.svg" alt="">
+          <h2>Arcade</h2>
+          <span class="monthly__plan">$ <span class="plan__value">9</span>/ <span class="plan__type">mo</span></span>
+
+          <span class="yearly__plan">$ <span class="plan__value">90</span>/ <span class="plan__type">yr</span></span>
+
+          <span class="yearly__planText">2 months free</span>
+        </div>
+        <div tabindex="2"  class="plan">
+          <img src="assets/images/icon-advanced.svg" alt="">
+          <h2>Adavanced</h2>
+          <span class="monthly__plan">$ <span class="plan__value">12</span>/ <span class="plan__type">mo</span></span>
+
+          <span class="yearly__plan">$ <span class="plan__value">120</span>/ <span class="plan__type">yr</span></span>
+
+          <span class="yearly__planText">2 months free</span>
+        </div>
+        <div tabindex="3" class="plan">
+          <img src="assets/images/icon-pro.svg" alt="">
+          <h2>Pro</h2>
+          <span class="monthly__plan">$ <span class="plan__value">15</span>/ <span class="plan__type">mo</span></span>
+
+          <span class="yearly__plan">$ <span class="plan__value">150</span>/ <span class="plan__type">yr</span></span>
+
+          <span class="yearly__planText">2 months free</span>
+        </div>
+        
+      </div>
+   
+    </article>
+    <article id="3" class="step3__content hide__content">
+      <h1>Pick add-ons</h1>
+      <p>Add-ons help enhance your gaming experience.</p>
+      <div class="addons__plan">
+        <div class="addon">
+          <input type="checkbox" id="service">
+          <label class="addon__description" for="service">
+            
+            <span>Online service</span>
+            <span>Access to multiplayer games</span>
+          </label>
+          <div class="addon__price">
+            <span class="addon__monthly">$ <span class="addon__value">1</span>/ <span class="addon__type">mo</span></span>
+
+            <span class="addon__yearly">$ <span class="addon__value">10</span>/ <span class="addon__type">yr</span></span>
+  
+          </div>
+        </div>
+        <div class="addon">
+          <input type="checkbox" id="storage">
+          <label class="addon__description" for="storage">
+            <span>Larger storage</span>
+            <span>Extra 1TB of cloud save</span>
+          </label>
+          <div class="addon__price">
+            <span class="addon__monthly">$ <span class="addon__value">2</span>/ <span class="addon__type">mo</span></span>
+
+            <span class="addon__yearly">$ <span class="addon__value">20</span>/ <span class="addon__type">yr</span></span>
+      
+          </div>
+        </div>
+        <div class="addon">
+          <input type="checkbox" id="customizable">
+          <label class="addon__description" for="customizable">
+            <span>Customizable Profile</span>
+            <span>Custom theme on your profile</span>
+          </label>
+          <div class="addon__price">
+            <span class="addon__monthly">$ <span class="addon__value">3</span>/ <span class="addon__type">mo</span></span>
+
+            <span class="addon__yearly">$ <span class="addon__value">20</span>/ <span class="addon__type">yr</span></span>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article id="4" class="step4__content hide__content">
+      <h1>Finishing up</h1>
+      <p>Double-check everything looks OK before confirming.</p>
+      <div class="total__container">
+        <div class="plan__details">
+          <div class="basic__plan">
+            <h2>&nbsp;</h2>
+            <span class="plan__price">$ <span class="plan__value"></span></span>
+            <button class="change">Change</a>
+  
+          </div>
+          <div class="addon__plan">
+
+          </div>
+        </div>
+        
+        <div class="totalDetails">
+          <p>Total (per <span class="plan__durationText"></span>)</p>
+          <span class="total__value">
+            <!-- +$12/mo -->
+          </span>
+        </div>
+
+      </div>
+    </article>
+    <article id="5" class="step5__content hide__content">
+      <img src="assets/images/icon-thank-you.svg" alt="">
+      <h1>Thank you!</h1>
+      <p>Thanks for confirming your subscription! We hope you have fun 
+        using our platform. If you ever need support, please feel free 
+        to email us at support@loremgaming.com.
+      </p>
+    </article>
+  </div>
+  <div class="btn__container">
+    <button class="prev-step hide__button">Go Back</button>
+    <button class="next-step show__button">Next Step</button>
+  </div>
+</main>
+
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://x.com/0xSkinny001">0Xskinny001</a>
+  </footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
